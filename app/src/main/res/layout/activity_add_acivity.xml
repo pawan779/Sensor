@@ -5,30 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".AddAcivity">
 
-    <Button
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/allSensor"
-        android:text="Show all sensor"/>
-
-    <Button
+        android:hint="Enter First Number"
+        android:id="@+id/etFirst"/>
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Accelerometer"
-        android:text="Accelerometer"/>
-    <Button
+        android:id="@+id/etSecond"
+        android:hint="Enter Second number"/>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gyroscope"
-        android:id="@+id/Gyro"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add two number"
-        android:id="@+id/Add"/>
-
+        android:id="@+id/tvGyro"/>
 
 </LinearLayout>

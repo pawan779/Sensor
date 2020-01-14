@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnAcc,btnShow;
+    Button btnAcc,btnShow,btnGyro,btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnAcc=findViewById(R.id.Accelerometer);
         btnShow=findViewById(R.id.allSensor);
+        btnGyro=findViewById(R.id.Gyro);
+        btnAdd=findViewById(R.id.Add);
 
         btnAcc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,SensorActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnGyro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,GyroScope.class);
+                startActivity(intent);
+            }
+        });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,AddAcivity.class);
                 startActivity(intent);
             }
         });
