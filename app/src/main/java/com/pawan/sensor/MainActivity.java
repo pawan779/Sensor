@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnAcc,btnShow,btnGyro,btnAdd;
+    Button btnAcc,btnShow,btnGyro,btnAdd,btnProxy,btnNotification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         btnShow=findViewById(R.id.allSensor);
         btnGyro=findViewById(R.id.Gyro);
         btnAdd=findViewById(R.id.Add);
+        btnProxy=findViewById(R.id.proximity);
+        btnNotification=findViewById(R.id.notification);
 
         btnAcc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +50,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnProxy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ProximitySensor.class);
+                startActivity(intent);
+            }
+        });
+        btnNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

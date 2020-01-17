@@ -29,6 +29,14 @@
         android:layout_height="wrap_content"
         android:text="Add two number"
         android:id="@+id/Add"/>
-
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proximity"
+        android:id="@+id/proximity"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:id="@+id/notification"/>
 </LinearLayout>
