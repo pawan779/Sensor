@@ -1,14 +1,22 @@
 package com.pawan.sensor.createChannel;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.os.Build;
+
+import androidx.core.app.RemoteInput;
+
+import com.pawan.sensor.R;
 
 public class CreateChannel {
     Context context;
     public final static String CHANNEL_1 = "Channel1";
     public final static String CHANNEL_2 = "Channel2";
+
+
 
 
 
@@ -32,6 +40,7 @@ public class CreateChannel {
                     NotificationManager.IMPORTANCE_LOW
                     );
             channel2.setDescription("This is channel 2");
+
 
             NotificationManager manager=context.getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);

@@ -34,16 +34,36 @@ public class NotificationActivity extends AppCompatActivity {
 
 
     }
+//
+//    private void DisplayNotification() {
+//        Notification notification=new NotificationCompat.Builder(this,CreateChannel.CHANNEL_1)
+//                .setSmallIcon(R.drawable.ic_pan_tool_black_24dp)
+//                .setContentTitle( " message")
+//                .setContentText(" Message Body")
+//                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+//                .build();
+//        notificationManagerCompat.notify(count++,notification);
+//    }
+
 
     private void DisplayNotification() {
-        Notification notification=new NotificationCompat.Builder(this,CreateChannel.CHANNEL_1)
+        Notification notification = new NotificationCompat.Builder(this, CreateChannel.CHANNEL_1)
                 .setSmallIcon(R.drawable.ic_pan_tool_black_24dp)
-                .setContentTitle(count++ +" message")
-                .setContentText(count++ +" Message Body")
+                .setContentTitle(" No conection")
+                .setContentText(" No connection, PLease connect")
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
-        notificationManagerCompat.notify(count++,notification);
+        notificationManagerCompat.notify(count++, notification);
+
     }
+    private void DisplayNotification2() {
+        Notification notification = new NotificationCompat.Builder(this, CreateChannel.CHANNEL_2)
+                .setSmallIcon(R.drawable.ic_pan_tool_black_24dp)
+                .setContentTitle("Connected")
+                .setContentText(" Tou have been connected to internet")
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+        notificationManagerCompat.notify(count++, notification);
 
-
+    }
 }

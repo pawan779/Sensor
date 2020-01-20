@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnAcc,btnShow,btnGyro,btnAdd,btnProxy,btnNotification;
+    Button btnAcc,btnShow,btnGyro,btnAdd,btnProxy,btnNotification,btnService,btnBroadcast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         btnAdd=findViewById(R.id.Add);
         btnProxy=findViewById(R.id.proximity);
         btnNotification=findViewById(R.id.notification);
+        btnService=findViewById(R.id.Service);
+        btnBroadcast=findViewById(R.id.Broadcast);
 
         btnAcc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +67,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ServicesActivity.class);
+                startActivity(intent);
+            }
+        });
 
+btnBroadcast.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(MainActivity.this,BroadCastActivity.class);
+        startActivity(intent);
+    }
+});
 
     }
 }

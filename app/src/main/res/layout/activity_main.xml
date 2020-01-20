@@ -39,4 +39,15 @@
         android:layout_height="wrap_content"
         android:text="Notification"
         android:id="@+id/notification"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service"
+        android:id="@+id/Service"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast"
+        android:id="@+id/Broadcast"/>
 </LinearLayout>
